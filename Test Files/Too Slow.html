@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haunted Button</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .button-container {
+            position: relative;
+            overflow: hidden;
+            width: fit-content;
+            height: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s;
+            pointer-events: none; /* Button will no longer register hover/click events */
+        }
+
+        .button-container:hover button {
+            transform: translateX(100%);
+        }
+
+        .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            color: #ff0000;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .button-container:hover .hover-text {
+            opacity: 1;
+            transform: translateY(-50%) translateX(-100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button>Try to click me</button>
+        <span class="hover-text">Too slow!</span>
+    </div>
+
+</body>
+</html>

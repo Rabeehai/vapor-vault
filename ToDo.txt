@@ -1,0 +1,13 @@
+1. encrypt file before upload
+2. grant read, write permissions based on IP
+	- Read for public (per file)
+	- write for select IP
+	
+3. make password for use outside personal PC (i know the P stands for personal, but there can be a PC that is not personal)
+4. set it up on linode
+5. make a toggle for allowing files to be viewed by the public
+6. color text in files based on extension, (py, java, etc)
+7. write file size somewhere next to it, or maybe on hover
+8. add support for directories and viewing the directory sub directories and files
+9. add video support for .mp4, .flv
+10. add audio support for .mp3, .wav

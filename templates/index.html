@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VaporVault: The Fading Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='vanish.css') }}">
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <h4>Documents</h4>
+			<ul>
+				{% for file in files %}
+					<li>
+						<span class="file-name">{{ file }}</span>
+						<div class="icon-box">
+							<img src="{{ url_for('static', filename='images/trsh.png') }}" class="trsh-button" alt="Delete">
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+        </div>
+        <div id="main-content">
+            <!-- Drag-and-Drop Area will go here -->
+			<h3 id="title_h1">File Content</h3>
+			<div id="file-content"  class="scroll">
+				<div id="placeholder" class="center-placeholder">
+					<img src="{{ url_for('static', filename='images/drag.png') }}" alt="Drag Files" id="drag-icon">
+					<p>Drag Files Here</p>
+				</div>
+			</div>
+        </div>
+    </div>
+    <!-- Linking the external JavaScript file -->
+	<script src="{{ url_for('static', filename='upld.js') }}"></script>
+</body>
+</html>

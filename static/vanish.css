@@ -1,0 +1,111 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 300px;  /* Fixed width for the left panel */
+    min-width: 300px;  /* Minimum width */
+    border-right: 1px solid #ccc;
+    background-color: #f4f4f4;
+    border-radius: 15px 0 0 15px;
+    padding: 15px;
+    flex-shrink: 0;  /* Prevents the sidebar from shrinking */
+}
+
+#sidebar ul {
+    list-style-type: none;  /* Removes bullet points */
+    padding-left: 0;  /* Removes default padding */
+}
+
+#sidebar ul li {
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 4px 0;
+    cursor: pointer;
+	display: flex;
+    justify-content: space-between;  /* Add this line */
+    align-items: center;  /* Optional, for vertical alignment */
+}
+
+#sidebar ul li:hover {
+    background-color: #cccccc;
+}
+
+div.scroll {
+        margin: 4px, 4px;
+        padding: 4px;
+        background-color: #fff4f0;
+		width: 100%;
+        overflow: auto;
+        white-space: nowrap;
+
+    }
+	
+#main-content {
+    flex-grow: 1; /* Takes the remaining width */
+    height: calc(100vh - 30px);  /* Adjust as per your requirements */
+    overflow: auto;  /* Add overflow */
+	padding: 15px;
+	box-sizing: border-box;  /* Add this line */
+}
+
+#file-content {
+    white-space: pre;
+	padding: 15px;
+	box-sizing: border-box;  /* Add this line */
+	border-radius: 10px;
+}
+
+#main-content h3{
+	margin: 2px;
+}
+
+#sidebar h4{
+	margin: 2px;
+}
+
+.trsh-button, .dld-button, .copy-button {
+    width: 20px;  /* Or your desired width */
+    height: 20px; /* Or your desired height */
+    cursor: pointer;
+	padding: 2px;
+	margin-left:5px;
+	
+}
+
+.trsh-button:hover, .dld-button:hover, .copy-button:hover {
+    transform: scale(1.1);
+}
+
+.icon-box {
+    display: inline-block;
+    margin-left: auto;
+	padding:0px;
+	margin-bottom:0px;
+	
+}
+
+.file-name {
+    display: inline-block;
+}
+
+.center-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#drag-icon {
+    width: 100px;  /* Adjust as needed */
+    height: auto;
+}
